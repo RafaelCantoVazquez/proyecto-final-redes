@@ -2,11 +2,9 @@
 sidebar_position: 3
 ---
 
-# Página 3
+# IPSec y componentes
 
-## IPSec
-
-## ¿Qué es?
+## IPSec, ¿qué es?
 
 IPSec (Internet Protocol Security) es uno de los protocolos VPN más populares, gracias a su reconocida robustez y a su capacidad para operar a nivel de red, en simples palabras, es un conjunto de protocolos de seguridad en internet diseñado para proteger los paquetes de datos enviados a través de una red IP.
 
@@ -27,4 +25,3 @@ Los protocolos que usa IPSec son:
 <iframe width="675" height="380" src="https://www.youtube.com/embed/a-sFus9PQ2g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <iframe width="675" height="380" src="https://www.youtube.com/embed/IzxC6UPilqQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-

@@ -2,11 +2,9 @@
 sidebar_position: 2
 ---
 
-# Página 2
+# VPN, protocolos y prácticas recomendadas
 
-## VPN
-
-## ¿Qué es?
+## VPN, ¿qué es?
 
 Acrónimo de Virtual Private Network - Red privada virtual, es un mecanismo empleado por dispositivos activos o por software que permite generar un canal seguro de comunicación, utiliza una infraestructura pública compartida como Internet en la cual ofrece las facilidades y ventajas de una red privada. Dentro de las redes privadas se consideran las VPN y LAN virtuales, pero dentro de las VPN sus clasificaciones con base en su modo de trabajo son host-to-host `figura 3.8`, host-tonetwork `figura 3.9` y network-to-network `figura 3.10`
 
@@ -18,15 +16,15 @@ Las VPN's pueden ser configuradas con diferentes protocolos PPTP, L2TP, **IPSEC*
 
 ![Docs Version Dropdown](/img/data-communication-security/VPN-OSI.JPG)
 
-### Prácticas recomendadas 
+### Prácticas recomendadas
 
 La configuración de éstos depende de las necesidades de la empresa, es conveniente su implementación pero también puede crear grandes agujeros en la red, algunas prácticas que se recomiendan son:
 
 - **Asegurar el sistema operativo de los equipos de comunicación:** Una solución de VPN no
-brinda solución efectiva si el sistema operativo de los equipos no es seguro, presumiblemente el
-firewall deberá proteger de los ataques al sistema operativo, por tal razón en un esquema VPN se
-debe de contemplar un firewall para rechazar los hosts que no son reconocidos para implementar
-una comunicación.
+  brinda solución efectiva si el sistema operativo de los equipos no es seguro, presumiblemente el
+  firewall deberá proteger de los ataques al sistema operativo, por tal razón en un esquema VPN se
+  debe de contemplar un firewall para rechazar los hosts que no son reconocidos para implementar
+  una comunicación.
 
 - **Implementar alguna VPN de un punto final hacia un servidor interno de la organización:** Con una implementación fuerte de filtrado hacia la VPN puede ser fácilmente comprometida para obtener acceso a la red desde cualquier lugar.
 
