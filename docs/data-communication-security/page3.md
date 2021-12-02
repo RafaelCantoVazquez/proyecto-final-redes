@@ -4,85 +4,27 @@ sidebar_position: 3
 
 # Página 3
 
-Let's translate `docs/intro.md` to French.
+## IPSec
 
-## Configure i18n
+## ¿Qué es?
 
-Modify `docusaurus.config.js` to add support for the `fr` locale:
+IPSec (Internet Protocol Security) es uno de los protocolos VPN más populares, gracias a su reconocida robustez y a su capacidad para operar a nivel de red, en simples palabras, es un conjunto de protocolos de seguridad en internet diseñado para proteger los paquetes de datos enviados a través de una red IP.
 
-```js title="docusaurus.config.js"
-module.exports = {
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en', 'fr'],
-  },
-};
-```
+El conjunto de protocolos en el IPSec tienen como finalidad hacer más seguras las comunicaciones dentro del IP, autenticando y cifrando cada paquete del flujo de datos. Es un protocolo diseñado por la IETF, que se definió en el RFC4301. También incluye protocolos para establecer la autenticación mutua entre agentes al inicio de la sesión y la negociación de llaves criptográficas durante la sesión. IPSec puede ser usado para proteger flujos de datos entre un par de hosts, ya sean servidores o clientes, entre un par de puertas de enlace (gateway) de seguridad, ya sean firewalls o ruteadores, o entre una puerta de enlace un hosts. IPSec es un esquema de seguridad en modo dual, de punto a punto, operante en la capa 3 del modelo OSI.
 
-## Translate a doc
+## Componentes
 
-Copy the `docs/intro.md` file to the `i18n/fr` folder:
+Los protocolos que usa IPSec son:
 
-```bash
-mkdir -p i18n/fr/docusaurus-plugin-content-docs/current/
+- **IKE (Internet Key Exchange):** para llevar a cabo una asociación de seguridad (SA, security asociation) al llevar las negociaciones de los protocolos y algoritmos, además de generar las llaves de cifrado y autenticación que serán usadas por IPSec.
 
-cp docs/intro.md i18n/fr/docusaurus-plugin-content-docs/current/intro.md
-```
+- **Encabezado de Autenticación (AH authentication header):** para proveer integridad y autenticación de origen de datos para los datagramas IP y para proveer protección contra los ataques de respuesta (reply attacks).
 
-Translate `i18n/fr/docusaurus-plugin-content-docs/current/intro.md` in French.
+- **Encabezado de carga de seguridad de encapsulamiento (ESP encapsulating security payload):** para proveer confidencialidad, autenticación de origen de datos, integridad sin conexión (conectionless), un servicio anti-respuesta, un tipo de secuencia parcial de integridad y una limitada confidencialidad de flujo de tráfico. ESP también soporta configuraciones de sólo cifrado y sólo autenticación, aunque esto se desaconseja. A diferencia del encabezado de autenticación ESP no protege el encabezado de paquete IP. En el modo de túnel, donde el paquete completo original es encapsulado con un nuevo encabezado de paquete, la protección que ofrece ESP abarca a todo el paquete,incluyendo el encapsulado, mientras que el encabezado exterior continua sin protección.
 
-## Start your localized site
+## Videos complementarios
 
-Start your site on the French locale:
+<iframe width="675" height="380" src="https://www.youtube.com/embed/a-sFus9PQ2g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-```bash
-npm run start -- --locale fr
-```
+<iframe width="675" height="380" src="https://www.youtube.com/embed/IzxC6UPilqQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Your localized site is accessible at `http://localhost:3000/fr/` and the `Getting Started` page is translated.
-
-:::caution
-
-In development, you can only use one locale at a same time.
-
-:::
-
-## Add a Locale Dropdown
-
-To navigate seamlessly across languages, add a locale dropdown.
-
-Modify the `docusaurus.config.js` file:
-
-```js title="docusaurus.config.js"
-module.exports = {
-  themeConfig: {
-    navbar: {
-      items: [
-        // highlight-start
-        {
-          type: 'localeDropdown',
-        },
-        // highlight-end
-      ],
-    },
-  },
-};
-```
-
-The locale dropdown now appears in your navbar:
-
-![Locale Dropdown](/img/tutorial/localeDropdown.png)
-
-## Build your localized site
-
-Build your site for a specific locale:
-
-```bash
-npm run build -- --locale fr
-```
-
-Or build your site to include all the locales at once:
-
-```bash
-npm run build
-```
