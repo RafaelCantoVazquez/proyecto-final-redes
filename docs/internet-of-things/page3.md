@@ -2,87 +2,22 @@
 sidebar_position: 3
 ---
 
-# Página 3
+# Implementando IoT
 
-Let's translate `docs/intro.md` to French.
+## ¿Cómo se implementa?
 
-## Configure i18n
+Es importante saber qué tecnología usar para sacar más provecho al proyecto a la hora de implementar IoT. En este sentido, teninendo esto en cuenta. Primero, los sensores, que son el dispositivo que recolecta los datos del ambiente y los transmite hacia el internet de las cosas. Segundo, las redes, que constituyen la forma como se conecta el sensor a Internet ya sea a través de WiFi, Ethernet o redes móviles (3G/4G/LTE/4.5G Narrowband). También hay algunos objetos que se comunican internamente de otra forma (Bluetooth / RF / Infrarrojo / protocolos propietarios) y al final llegan a un Concentrador o Gateway que es el que se conecta a Internet. Comprender estos diversos elementos resultan ser muy útiles para implementar IoT.
 
-Modify `docusaurus.config.js` to add support for the `fr` locale:
+![IoT](https://www.researchgate.net/profile/Natalia-Marinova/publication/318284317/figure/fig2/AS:513759652790272@1499501254906/IoT-technologies-and-applications-that-could-be-used-in-educational-process-Source.png)
 
-```js title="docusaurus.config.js"
-module.exports = {
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en', 'fr'],
-  },
-};
-```
+## ¿Cómo funcionan los sensores?
 
-## Translate a doc
+Las nuevas tendencias en tecnología facilitan a los fabricantes la producción de sensores más baratos, más inteligentes y más pequeños, lo que impulsa el aumento del número de sensores instalados por los proveedores de soluciones de IoT. Sin embargo, debido a los múltiples proveedores y tecnologías utilizadas, los sensores de IoT se enfrentan a problemas de interoperabilidad, consumo de energía, seguridad y privacidad.
 
-Copy the `docs/intro.md` file to the `i18n/fr` folder:
+## ¿Dónde comienzan las redes?
 
-```bash
-mkdir -p i18n/fr/docusaurus-plugin-content-docs/current/
+Algunos de los requisitos previos para la amplia adopción de la tecnología IoT es que las redes tengan una gran velocidad de datos, disponibilidad y un costo más bajo en el uso de los datos, la virtualización, etc. Las redes se utilizan para transmitir los datos recogidos por los sensores a través de las redes con diferentes componentes, incluidos los enrutadores y los puentes en las diferentes implantaciones de IoT. Actualmente, la conexión de las diferentes partes de las redes con los sensores se realiza mediante diferentes tecnologías (por ejemplo, Wi-Fi, redes celulares). En cambio, la interconectividad fluida y la heterogeneidad de las redes, la disponibilidad de la cobertura de las redes, el consumo de energía, la seguridad, etc., siguen faltando dentro de un contexto marcado por el enorme crecimiento de los dispositivos conectados a IoT. Por lo cual es necesario considerarlo dentro de la implementación.
 
-cp docs/intro.md i18n/fr/docusaurus-plugin-content-docs/current/intro.md
-```
+![IoT](http://rfpage.com/wp-content/uploads/2018/01/Key-IoT-Components.jpg)
 
-Translate `i18n/fr/docusaurus-plugin-content-docs/current/intro.md` in French.
-
-## Start your localized site
-
-Start your site on the French locale:
-
-```bash
-npm run start -- --locale fr
-```
-
-Your localized site is accessible at `http://localhost:3000/fr/` and the `Getting Started` page is translated.
-
-:::caution
-
-In development, you can only use one locale at a same time.
-
-:::
-
-## Add a Locale Dropdown
-
-To navigate seamlessly across languages, add a locale dropdown.
-
-Modify the `docusaurus.config.js` file:
-
-```js title="docusaurus.config.js"
-module.exports = {
-  themeConfig: {
-    navbar: {
-      items: [
-        // highlight-start
-        {
-          type: 'localeDropdown',
-        },
-        // highlight-end
-      ],
-    },
-  },
-};
-```
-
-The locale dropdown now appears in your navbar:
-
-![Locale Dropdown](/img/tutorial/localeDropdown.png)
-
-## Build your localized site
-
-Build your site for a specific locale:
-
-```bash
-npm run build -- --locale fr
-```
-
-Or build your site to include all the locales at once:
-
-```bash
-npm run build
-```
+<iframe width="675" height="380" src="https://www.youtube.com/watch?v=LlhmzVL5bm8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
