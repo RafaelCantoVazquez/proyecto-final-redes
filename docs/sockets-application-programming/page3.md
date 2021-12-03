@@ -2,54 +2,35 @@
 sidebar_position: 3
 ---
 
-# Página 3
+# Ejemplo
+Ejemplo aplicación cliente/servidor:
 
-Documents are **groups of pages** connected through:
+- El cliente lee una línea de la entrada estándar (inFromUser stream) , y la envía al servidor vía el socket (outToServer stream) 
+- El servidor lee la línea del desde el socket 
+- El servidor convierte la línea en mayusculas y la envía al cliente 
+- El cliente lee e imprime la línea modificada desde el socket (inFromServer stream)
 
-- a **sidebar**
-- **previous/next navigation**
-- **versioning**
+### Programación de sockets con TCP
 
-## Create your first Doc
+`Aplicación cliente/servidor con sockets TCP`
 
-Create a markdown file at `docs/hello.md`:
+![Docs Version Dropdown](/img/sockets-application-programming/Ejemplo1.JPG)
 
-```md title="docs/hello.md"
-# Hello
+`Interacción de aplicación cliente/servidor con sockets TCP`
 
-This is my **first Docusaurus document**!
-```
+![Docs Version Dropdown](/img/sockets-application-programming/Ejemplo2.JPG)
 
-A new document is now available at `http://localhost:3000/docs/hello`.
+### Programación de sockets con UDP
 
-## Configure the Sidebar
+`Aplicación cliente/servidor con sockets UDP`
 
-Docusaurus automatically **creates a sidebar** from the `docs` folder.
+![Docs Version Dropdown](/img/sockets-application-programming/Ejemplo3.JPG)
 
-Add metadatas to customize the sidebar label and position:
 
-```md title="docs/hello.md" {1-4}
----
-sidebar_label: 'Hi!'
-sidebar_position: 3
----
+`Interacción de aplicación cliente/servidor con sockets UDP`
 
-# Hello
+![Docs Version Dropdown](/img/sockets-application-programming/Ejemplo4.JPG)
 
-This is my **first Docusaurus document**!
-```
+## Videos complementarios
 
-It is also possible to create your sidebar explicitly in `sidebars.js`:
-
-```diff title="sidebars.js"
-module.exports = {
-  tutorialSidebar: [
-    {
-      type: 'category',
-      label: 'Tutorial',
--     items: [...],
-+     items: ['hello'],
-    },
-  ],
-};
-```
+<iframe width="675" height="380" src="https://www.youtube.com/embed/7f9NzvvPo9g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
