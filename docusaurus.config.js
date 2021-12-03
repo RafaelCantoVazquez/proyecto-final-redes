@@ -9,7 +9,7 @@ const config = {
   title: 'Redes y Seguridad de Computadoras',
   tagline: 'Proyecto final',
   url: 'https://rafaelcantovazquez.github.io',
-  baseUrl: '/',
+  baseUrl: '/proyecto-final-redes/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
