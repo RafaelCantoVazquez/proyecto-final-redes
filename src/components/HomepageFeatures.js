@@ -4,40 +4,38 @@ import styles from './HomepageFeatures.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Programa con sockets',
+    Svg: require('../../static/img/undraw_mind_map_re_nlb6.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Aprendamos un poco más sobre la programación de aplicaciones con
+        sockets.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Asegura los datos en una red',
+    Svg: require('../../static/img/undraw_two_factor_authentication_namy.svg')
+      .default,
     description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
+      <>Conozcamos sobre la seguridad en la comunicación de datos en una red.</>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
-    ),
+    title: 'Siéntete seguro en la Web',
+    Svg: require('../../static/img/undraw_security_re_a2rk.svg').default,
+    description: <>Indaguemos más sobre la seguridad en la web.</>,
+  },
+  {
+    title: 'IoT',
+    Svg: require('../../static/img/undraw_circuit_board_4c4d.svg').default,
+    description: <>Entendamos qué es el Internet de las Cosas.</>,
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({ Svg, title, description }) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx('col col--3')}>
       <div className="text--center">
         <Svg className={styles.featureSvg} alt={title} />
       </div>
