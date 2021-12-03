@@ -8,12 +8,12 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Redes y Seguridad de Computadoras',
   tagline: 'Proyecto final',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  url: 'https://rafaelcantovazquez.github.io',
+  baseUrl: '/proyecto-final-redes/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'Loatí Cabs', // Usually your GitHub org/user name.
+  organizationName: 'RafaelCantoVazquez', // Usually your GitHub org/user name.
   projectName: 'proyecto-final-redes', // Usually your repo name.
 
   presets: [
